@@ -6,6 +6,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:padding="20dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -18,8 +20,8 @@
                android:id="@+id/userIdText"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
                android:layout_marginTop="8dp"
-
                android:layout_marginBottom="8dp"
                android:text="TextView"
                app:layout_constraintBottom_toTopOf="@+id/IdText"
@@ -30,9 +32,10 @@
                android:id="@+id/IdText"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
                android:layout_marginTop="8dp"
-               android:layout_marginBottom="8dp"
 
+               android:layout_marginBottom="8dp"
                android:text="TextView"
                app:layout_constraintBottom_toTopOf="@+id/titleText"
                app:layout_constraintStart_toStartOf="parent"
@@ -42,8 +45,9 @@
                android:id="@+id/titleText"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_marginTop="16dp"
-               android:layout_marginBottom="16dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="8dp"
+               android:layout_marginBottom="8dp"
                android:text="TextView"
                app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintStart_toStartOf="parent"

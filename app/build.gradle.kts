@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id ("kotlin-kapt")
-    id ("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -43,20 +43,18 @@ android {
 
 dependencies {
 
-    val lifecycle_version = "2.2.0"
+    val lifecycle_version = "2.6.0"
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
 
-    implementation ("com.google.dagger:hilt-android:2.52")
 
+
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
     implementation("io.coil-kt:coil:2.5.0")
-
-    implementation ("com.google.dagger:hilt-android:2.51.1")
-    kapt ("com.google.dagger:hilt-compiler:2.51.1")
-
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

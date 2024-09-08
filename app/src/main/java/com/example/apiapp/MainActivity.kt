@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 
 import com.example.apiapp.databinding.ActivityMainBinding
@@ -21,13 +22,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModule.fetchAlbums()
         viewModule.album.observe(this, Observer {
+            binding.myList.apply{
+                layoutManager=LinearLayoutManager(this@MainActivity)
+                adapter=MyAbapter(viewModule.album)
+
+            }
+        })
+
+       /* viewModule.album.observe(this, Observer {
             for (i in it){
                 Log.i("test",i.title)
                 Log.i("test",i.id.toString())
                 Log.i("test",i.userId.toString())
             }
 
-        })
+        })*/
 /*
 binding.image
     .load("https://static.vecteezy.com/system/resources/previews/021/830/103/large_2x/realistic-cute-cat-cartoon-style-digital-artwork-free-png.png")

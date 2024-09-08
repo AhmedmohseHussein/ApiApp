@@ -11,9 +11,11 @@ import javax.inject.Inject
 @HiltViewModel
 class AlbumeViewModule @Inject constructor(private val albumRebo: AlbumRebo): ViewModel() {
 
-   val _albums=MutableLiveData<List<Album>>()
+    //to update
+  private val _albums=MutableLiveData<List<Album>>()
 
-    val album:LiveData<List<Album>> =_albums
+    val album:LiveData<List<Album>> get() =_albums
+
 
     fun fetchAlbums(){
         viewModelScope.launch{
